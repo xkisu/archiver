@@ -109,6 +109,9 @@ type Extractor interface {
 // or contents of a file within an archive.
 type File struct {
 	os.FileInfo
+	
+	// OriginalPath is the original full path to file
+	OriginalPath string
 
 	// The original header info; depends on
 	// type of archive -- could be nil, too.
